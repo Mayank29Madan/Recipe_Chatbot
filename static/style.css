@@ -1,0 +1,437 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f4e9;
+    background-image: url('https://www.transparenttextures.com/patterns/food.png');
+    color: #333;
+}
+
+.chat {
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.card {
+    height: 600px;
+    border-radius: 20px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    border: none !important;
+    overflow: hidden;
+}
+
+.contacts_body {
+    padding: 0.75rem 0 !important;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.msg_card_body {
+    overflow-y: auto;
+    padding: 15px 25px;
+    background-color: #fff;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+}
+
+.card-header {
+    border-radius: 20px 20px 0 0 !important;
+    border-bottom: 0 !important;
+    padding: 18px;
+    background: #e74c3c !important; /* Deeper red for better contrast */
+    color: white;
+}
+
+.card-footer {
+    border-radius: 0 0 20px 20px !important;
+    border-top: 0 !important;
+    background-color: #f8f9fa !important;
+    padding: 15px;
+}
+
+.container {
+    align-content: center;
+}
+
+.search {
+    border-radius: 50px 0 0 50px !important;
+    background-color: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    color: #495057 !important;
+    padding-left: 20px;
+}
+
+.search:focus {
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5) !important;
+    outline: 0px !important;
+    border-color: #e74c3c !important;
+}
+
+.type_msg {
+    background-color: #ffffff !important;
+    border: 1px solid #ddd !important;
+    color: #495057 !important;
+    height: 50px !important;
+    border-radius: 50px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.type_msg:focus {
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.5) !important;
+    outline: 0px !important;
+    border-color: #e74c3c !important;
+}
+
+.attach_btn {
+    border-radius: 50% !important;
+    height: 40px;
+    width: 40px;
+    background-color: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    color: #e74c3c !important;
+    cursor: pointer;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.send_btn {
+    border-radius: 50% !important;
+    height: 40px;
+    width: 40px;
+    background-color: #e74c3c !important;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.send_btn:hover {
+    background-color: #c0392b !important;
+    transform: scale(1.05);
+}
+
+.attach_btn:hover {
+    background-color: #eaeaea !important;
+    transform: scale(1.05);
+}
+
+.search_btn {
+    border-radius: 0 50px 50px 0 !important;
+    background-color: #e74c3c !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.contacts {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts li {
+    width: 100% !important;
+    padding: 10px 15px;
+    margin-bottom: 15px !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contacts li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.user_img {
+    height: 60px;
+    width: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user_img_msg {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img_cont {
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+
+.img_cont_msg {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+.online_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    border: 2px solid white;
+}
+
+.offline {
+    background-color: #e74c3c !important;
+}
+
+.user_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+.user_info span {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.user_info p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.video_cam {
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.video_cam span {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.msg_cotainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    border-radius: 18px;
+    background-color: #e74c3c; /* Darker red for better contrast */
+    color: white;
+    padding: 12px 20px;
+    position: relative;
+    max-width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    font-weight: 500; /* Slightly bolder text */
+}
+
+.msg_cotainer_send {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    border-radius: 18px;
+    background-color: #3498db; /* Blue for user messages */
+    color: white;
+    padding: 12px 20px;
+    position: relative;
+    max-width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    line-height: 1.5;
+    font-weight: 500; /* Slightly bolder text */
+}
+
+.msg_time {
+    position: absolute;
+    left: 5px;
+    bottom: -20px;
+    color: #666; /* Darker time text */
+    font-size: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.msg_time_send {
+    position: absolute;
+    right: 5px;
+    bottom: -20px;
+    color: #666; /* Darker time text */
+    font-size: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.msg_head {
+    position: relative;
+}
+
+#action_menu_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#action_menu_btn:hover {
+    transform: scale(1.1);
+}
+
+.action_menu {
+    z-index: 1;
+    position: absolute;
+    padding: 15px 0;
+    background-color: white;
+    color: #495057;
+    border-radius: 15px;
+    top: 45px;
+    right: 15px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.action_menu ul li {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.action_menu ul li i {
+    padding-right: 10px;
+    color: #e74c3c;
+}
+
+.action_menu ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.d-flex {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.d-flex:last-child {
+    margin-bottom: 10px;
+}
+
+/* Recipe Card Styles */
+.recipe_card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #e74c3c;
+}
+
+.recipe_card h4 {
+    color: #e74c3c;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.recipe_card ul, .recipe_card ol {
+    padding-left: 25px;
+    margin: 8px 0;
+    color: #333; /* Dark text for better readability */
+}
+
+.recipe_card li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Add a cooking animation */
+@keyframes cooking {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animated-icon {
+    animation: cooking 2s infinite;
+}
+
+@media(max-width: 576px) {
+    .contacts_card {
+        margin-bottom: 15px !important;
+    }
+    
+    .msg_cotainer, .msg_cotainer_send {
+        max-width: 90%;
+        padding: 10px 15px;
+    }
+    
+    .card {
+        height: 85vh;
+        margin: 10px;
+    }
+    
+    .chat {
+        margin: 0;
+    }
+}
+
+/* Loading Animation */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    opacity: 0.6;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation: typing 1s infinite ease-in-out 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation: typing 1s infinite ease-in-out 0.4s;
+}
+
+@keyframes typing {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}

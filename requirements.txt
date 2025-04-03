@@ -1,0 +1,13 @@
+llama-cpp-python
+sentence-transformers==3.4.1
+pymongo==4.11
+tiktoken
+pyngrok
+pymongo[srv]
+einops
+langchain_community
+langchain==0.3.17
+flask
+pypdf
+python-dotenv
+-e .
