@@ -1,4 +1,6 @@
 llama-cpp-python
+pandas
+numpy
 sentence-transformers==3.4.1
 pymongo==4.11
 tiktoken
