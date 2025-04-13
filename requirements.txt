@@ -4,6 +4,8 @@ numpy
 sentence-transformers==3.4.1
 pymongo==4.11
 tiktoken
+pandas
+numpy
 pyngrok
 pymongo[srv]
 einops
@@ -12,4 +14,6 @@ langchain==0.3.17
 flask
 pypdf
 python-dotenv
+torch
+torchvision
 -e .
