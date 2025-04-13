@@ -32,7 +32,7 @@ MONGO_PASS = urllib.parse.quote_plus(os.environ.get('MONGO_PASS'))
 CLUSTER_NAME = urllib.parse.quote_plus(os.environ.get('CLUSTER_NAME'))
 
 # Login to Hugging Face
-login(token=HF_TOKEN)  # Replace with your actual token
+'''login(token=HF_TOKEN)  # Replace with your actual token
 
 # Create the directory if it doesn't exist
 os.makedirs("IP/Model", exist_ok=True)
@@ -44,7 +44,7 @@ model_path = hf_hub_download(
     local_dir="Model"
 )
 
-print(f"Model downloaded to: {model_path}")
+print(f"Model downloaded to: {model_path}")'''
 
 MONGO_URI = f"mongodb+srv://{MONGO_USER}:{MONGO_PASS}@cluster0.uxade.mongodb.net/?retryWrites=true&w=majority&appName={CLUSTER_NAME}"
 
@@ -87,12 +87,12 @@ callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 llm = LlamaCpp(
     model_path="Model/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
     temperature=0.75,
-    max_tokens=100,
+    max_tokens=2000,
     top_p=1,
     callback_manager=callback_manager,
     verbose=True,
     # Adding these parameters for better performance
-    n_ctx=2048,  # Context window
+    n_ctx=4096,  # Context window
     n_batch=512,  # Batch size for prompt processing
     f16_kv=True,  # Use half-precision for key/value cache
     streaming=True,  # Enable streaming for faster response time
@@ -159,13 +159,7 @@ atexit.register(close_model)
 
 if __name__ == '__main__':
     try:
-        public_url = ngrok.connect(5000).public_url
-        print(f"Public URL: {public_url}")
-        
-        threading.Thread(target=run_flask, daemon=True).start()
-        
-        while True:
-            time.sleep(30)
+        run_flask()
     except KeyboardInterrupt:
         print("\nShutting down gracefully...")
         close_model()
