@@ -6,7 +6,7 @@ pymongo==4.11
 tiktoken
 pandas
 numpy
-pyngrok
+gunicorn
 pymongo[srv]
 einops
 langchain_community
