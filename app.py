@@ -10,7 +10,6 @@ from huggingface_hub import login
 from huggingface_hub import hf_hub_download
 from dotenv import load_dotenv
 from src.prompt import *
-from pyngrok import ngrok
 import threading
 import time
 import os
