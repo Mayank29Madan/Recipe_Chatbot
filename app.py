@@ -85,7 +85,7 @@ PROMPT = PromptTemplate(
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
 llm = LlamaCpp(
-    model_path="Model/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+    model_path="Model/Mistral-7B-Instruct-v0.3.Q4_K_M.gguf",
     temperature=0.75,
     max_tokens=2000,
     top_p=1,
